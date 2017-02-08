@@ -1,0 +1,11 @@
+<div id="left_sidebar_wrapper">
+    <div id="left_sidebar_logo">
+        <img src="/img/logo.png">
+    </div>
+    <ul id="left_sidebar_menu">
+        <li ng-repeat="link in $ctrl.menuLinks" class="left_sidebar_link" ng-class="{active: link.active}" ng-click="$ctrl.setLinkActive(link)">
+            <img ng-src="/img/{{link.icon}}">
+            {{link.title}}
+        </li>
+    </ul>
+</div>

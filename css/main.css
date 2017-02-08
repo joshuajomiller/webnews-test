@@ -1,0 +1,219 @@
+/*resets*/
+html, body{
+    margin: 0;
+    padding:0;
+    width:100%;
+    font-family: 'Roboto', sans-serif;
+    font-size: 10px;
+    background-color: #f6f7fa;
+}
+h1{
+    font-size: 3rem;
+    margin-left: 10px;
+}
+#left_sidebar_wrapper{
+    position: fixed;
+    height:100vh;
+    background: #0e1a35;
+    color:#fff;
+    float: left;
+}
+#left_sidebar_logo img{
+    max-width: 140px;
+    margin: 15px 0 15px 23px;
+}
+#left_sidebar_menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.left_sidebar_link{
+    padding: 20px 80px 20px 30px;
+    font-weight: 500;
+    font-size: 1.7rem;
+    border-left: 7px solid #0e1a35;
+    cursor: pointer;
+}
+.left_sidebar_link.active{
+    background: #122143;
+    border-left: 7px solid #5584ff;
+}
+.left_sidebar_link img{
+    max-width: 14px;
+    max-height: 14px;
+    margin-right: 5px;
+}
+main{
+    margin-left: 209px;
+}
+#main_header_wrapper {
+    overflow: auto;
+    background: #fff;
+    border:1px solid #d4d9e3;
+}
+#header_left_section {
+    float: left;
+    padding: 30px 20px 20px;
+}
+#header_right_section {
+    float: right;
+    padding: 30px 20px 20px;
+}
+.header_menu_button {
+    float: left;
+    padding: 0 15px;
+    cursor: pointer;
+    position: relative;
+}
+#header_arrow_left {
+    position: relative;
+    top: -3px;
+    max-width: 4px;
+}
+.header_menu_icon {
+    max-width: 20px;
+    max-height: 20px;
+}
+.header_menu_icon.search_icon{
+    height: 16px;
+}
+.header_menu_button.add_project {
+    display: inline-block;
+    background: #5584ff;
+    padding: 10px 20px;
+    border-radius: 30px;
+    color: #fff;
+    position: relative;
+    top: -10px;
+    margin-right: 20px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+}
+#header_notifications_count {
+    position: absolute;
+    top: -3px;
+    background: #5584ff;
+    color: #fff;
+    width: 10px;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 0.8rem;
+    right: 11px;
+    border: 1px solid #fff;
+}
+.header_menu_icon.profile_icon {
+    max-width: 40px;
+    max-height: 40px;
+    position: relative;
+    top: -10px;
+    float: left;
+}
+#down_arrow {
+    margin-left: 5px;
+    float: left;
+    position: relative;
+    top: 7px;
+    width: 8px;
+}
+#content_block {
+    overflow: auto;
+    padding: 10px;
+}
+#main_content_wrapper{
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-align-content: flex-start;
+    -ms-flex-line-pack: start;
+    align-content: flex-start;
+    -webkit-align-items: flex-start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+}
+.main_content_section{
+    -webkit-order: 2;
+    -ms-flex-order: 2;
+    order: 2;
+    -webkit-flex: 1 0 33%;
+    -ms-flex: 1 0 33%;
+    flex: 1 0 33%;
+    -webkit-align-self: auto;
+    -ms-flex-item-align: auto;
+    align-self: auto;
+    min-height: 300px;
+    /*falback for opera */
+    /*max-width: 33%;*/
+    /*max-width: calc(100% / 3);*/
+    display: flex;
+}
+#sales_section{
+    -webkit-flex: 0 1 45%;
+    -ms-flex: 0 1 45%;
+    flex: 0 1 45%;
+    /*max-width: 45%;*/
+}
+#report_section{
+    -webkit-flex: 0 1 55%;
+    -ms-flex: 0 1 55%;
+    flex: 0 1 55%;
+    /*max-width: 55%;*/
+}
+.main_content_box{
+    background: #fff;
+    border: 1px solid #d4d9e3;
+    box-sizing: border-box;
+    align-items: stretch;
+    width: 100%;
+    margin: 10px;
+}
+
+/*Media Queries*/
+@media screen and (max-width: 991px){
+    .left_sidebar_link {
+        padding: 20px 40px 20px 20px;
+    }
+    #left_sidebar_logo img {
+        max-width: 121px;
+        margin: 15px 0 15px 14px;
+    }
+    main {
+        margin-left: 159px;
+    }
+}
+@media screen and (max-width: 767px){
+    #left_sidebar_wrapper {
+        display: none;
+    }
+    main {
+         margin-left: 0;
+    }
+    #header_left_section, #header_right_section{
+        padding: 30px 10px 10px;
+    }
+    .main_content_section {
+        min-width: 100%;
+    }
+}
+@media screen and (max-width: 479px){
+    #header_left_section, #header_right_section {
+        padding: 30px 5px 10px 10px;
+    }
+    .header_menu_button.add_project {
+        padding: 10px;
+        margin-right: 5px;
+        font-size: 1rem;
+    }
+    .header_menu_button {
+        padding: 0 5px;
+    }
+}
